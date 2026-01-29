@@ -3,16 +3,9 @@ pipeline {
 
     stages {
 
-        stage('Checkout Code') {
-            steps {
-                git branch: 'main', url: 'https://github.com/beastguhan/Assignment-1.git'
-
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
-                sh 'pip install -r requirements.txt'
+                sh 'pip3 install -r requirements.txt'
             }
         }
 
